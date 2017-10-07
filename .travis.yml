@@ -7,4 +7,3 @@ deploy:
   app: lpa2utbm
   api_key:
     secure: "9d3b0be3-e44a-490d-ae9c-0fcd3b3173bc"
-    

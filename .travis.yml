@@ -8,4 +8,5 @@ deploy:
   app: lpa2utbm
   on:
     repo: Anthex/projet
+  run: "rake db:test:prepare"
   run: "rake db:migrate"

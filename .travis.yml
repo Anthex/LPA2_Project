@@ -1,12 +1,13 @@
 nguage: ruby
 rvm:
 - 2.2
+before_deploy:
+  run: "rake db:test:prepare"  
 deploy:
   provider: heroku
   api_key:
     secure: YxlzuMHjKho/TuVSKIK12EKY5TH3KkyGAaBz49bRGpOEnPPrzEZ3KFctLMn2aLD/cTIzE65i0J4CqmYC2tMuCcvU/Sut36PNfmb8d9GSjL/aJbCS217E/MW6P1liOslzAxPpNArzJ/uoCUfHH2XG1uhryZg0hWVZHr4il4pFoLiXzjDQQEb5R7uVrH+vlX3zKU/AHLvsagFnWHfmtFvUlYPSeU4zocm/L/nngmDpe0oSH37vhmOWuPPDAtAAW1pG614iuGPRdsoFSubM12B+0IfddHcN1Mb1vcCSW7mLu8ofYxpxtqOL2mMJdLtgx3yeA3Bx6nxwnbttGBnsl5Udjy8GOwRSBwtR/IPRlEYJmASMrkGzysMyqvEkgviLOX2bmX0uiBYtZF++pTCGFI8H9nkaGuRYTZRvOR7EF/tJw2v13SNoUD64wY6aV4WleLapOxj5JPo3yxjbfETFHCeEHdCLw8u/Gw2M7iQJjO3+4mbsCjAkvkEEi6V8wRAjPcXhWwmkVCBJWW9tSKkXHxqaF/J2+B8qPIghWcvdk9+7vbLNv/U9Jq3Ruld930zOmDcv5ZYv/sRMUjsHVx0iQY4oBDEHYapWFBAYBJRnIb89KeEIylbkuQhcOUT5wXy1KYhte/WervVPn/Ckq6QteZHOeuH3Qu1g555HDvGFyY+p5H0=
   app: lpa2utbm
-  run: "rake db:test:prepare"
   run: "rake db:migrate"
   on:
     repo: Anthex/projet

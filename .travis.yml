@@ -1,8 +1,6 @@
-nguage: ruby
+language: ruby
 rvm:
 - 2.2
-before_deploy:
-  run: "rake db:test:prepare"  
 deploy:
   provider: heroku
   api_key:

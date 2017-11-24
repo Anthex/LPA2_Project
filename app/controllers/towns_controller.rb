@@ -10,6 +10,7 @@ class TownsController < ApplicationController
   # GET /towns/1
   # GET /towns/1.json
   def show
+     @meteo = ForecastIO.forecast(37.8267, -122.423).currently.summary
   end
 
   # GET /towns/new

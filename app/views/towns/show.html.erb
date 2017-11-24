@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  Météo : 
-  <% @meteo.currently.summary %>
+    Météo : 
+  <%= @meteo.currently.summary %>
 </p>
 <%= link_to 'Edit', edit_town_path(@town) %> |
 <%= link_to 'Back', towns_path %>

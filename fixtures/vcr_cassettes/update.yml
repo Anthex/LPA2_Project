@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://nominatim.openstreetmap.org/search?format=json&limit=1&q=Tourcoing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Nominatim Ruby Gem 0.0.6
+      Accept-language:
+      - en
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 08 Dec 2017 22:23:03 GMT
+      server:
+      - Apache/2.4.18 (Ubuntu)
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - OPTIONS,GET
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOiIxNzkxNDMzMjAiLCJsaWNlbmNlIjoiRGF0YSDCqSBP
+        cGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHA6XC9c
+        L3d3dy5vcGVuc3RyZWV0bWFwLm9yZ1wvY29weXJpZ2h0Iiwib3NtX3R5cGUi
+        OiJyZWxhdGlvbiIsIm9zbV9pZCI6IjU5NTUxIiwiYm91bmRpbmdib3giOlsi
+        NTAuNjkzMDgxMSIsIjUwLjc0OTAzMTgiLCIzLjExODYyMzYiLCIzLjE5Njcz
+        NDEiXSwibGF0IjoiNTAuNzIxNzMwNCIsImxvbiI6IjMuMTU5MzA4MiIsImRp
+        c3BsYXlfbmFtZSI6IlRvdXJjb2luZywgTGlsbGUsIE5vcmQsIE5vcmQtUGFz
+        LWRlLUNhbGFpcyBhbmQgUGljYXJkeSwgTWV0cm9wb2xpdGFuIEZyYW5jZSwg
+        NTkyMDAsIEZyYW5jZSIsImNsYXNzIjoiYm91bmRhcnkiLCJ0eXBlIjoiYWRt
+        aW5pc3RyYXRpdmUiLCJpbXBvcnRhbmNlIjowLjI1NzA3NDg3NjUyMTA3LCJp
+        Y29uIjoiaHR0cDpcL1wvbm9taW5hdGltLm9wZW5zdHJlZXRtYXAub3JnXC9p
+        bWFnZXNcL21hcGljb25zXC9wb2lfYm91bmRhcnlfYWRtaW5pc3RyYXRpdmUu
+        cC4yMC5wbmcifV0=
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 22:23:03 GMT
+recorded_with: VCR 4.0.0

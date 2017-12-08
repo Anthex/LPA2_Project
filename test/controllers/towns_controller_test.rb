@@ -17,16 +17,20 @@ class TownsControllerTest < ActionController::TestCase
   end
 
   test "should create town" do
-    assert_difference('Town.count') do
+    VCR.use_cassette("create") do
+      assert_difference('Town.count') do
       post :create, town: { lat: @town.lat, lon: @town.lon, name: @town.name }
+      end
     end
 
     assert_redirected_to town_path(assigns(:town))
   end
 
   test "should show town" do
-    get :show, id: @town
-    assert_response :success
+    VCR.use_cassette("show") do
+      get :show, id: @town
+      assert_response :success
+    end
   end
 
   test "should get edit" do
@@ -35,8 +39,10 @@ class TownsControllerTest < ActionController::TestCase
   end
 
   test "should update town" do
-    patch :update, id: @town, town: { lat: @town.lat, lon: @town.lon, name: @town.name }
-    assert_redirected_to town_path(assigns(:town))
+    VCR.use_cassette("update") do
+      patch :update, id: @town, town: { lat: @town.lat, lon: @town.lon, name: @town.name }
+      assert_redirected_to town_path(assigns(:town))
+    end
   end
 
   test "should destroy town" do
